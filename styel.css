@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    background-color:rgb(0, 0, 0,0.4);
+    height: 100vh;
+}
+.navigation{
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#heading{
+    font-size: x-large;
+    margin-left: 20px;
+    font-family: "Caveat";
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.616);
+    animation: slide-down 1s ease-in-out;
+}
+@keyframes slide-down{
+    from{opacity: 0; transform: translateY(-100%);}
+}
+#links {
+    list-style: none;
+    display: flex;
+    font-family: "Montserrat";
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+#links a{
+    text-decoration: none;
+    padding-inline: 20px;
+    color: rgba(255, 255, 255, 0.616);
+} 
+#home{
+    animation: slide-up 1s ;
+}
+#about{
+    animation: slide-up 1.5s ;
+}
+#service{
+    animation: slide-up 2s ;
+}
+#contact{
+    animation: slide-up 2.5s ;
+}
+@keyframes slide-up { 
+    0% {
+        transform: translateY(-100%) ;opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);opacity: 1;       
+    }
+}
+.background-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(max-aspect-ratio: 16/9) {
+    .background-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9) {
+    .background-video{
+        width: auto;
+        height: 100%;
+    }
+}
+.main{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+.content h2{
+    font-size: 55px;
+    color: rgba(255, 255, 255, 0.749);
+    font-family: "Montserrat";
+    margin-bottom: 20px;
+    animation: fade-up 1s ease-in-out;
+}
+@keyframes fade-up{
+    0% {
+        transform: translateY(50%);opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);opacity: 1;
+    }
+}
+.main button{
+    background-color: transparent;
+    padding:20px 40px;
+    border: 2px solid rgba(255, 255, 255, 0.616);
+    border-radius: 30px;
+    font-size: 15px;
+    color: white;
+    animation: fade-down 0.8s ease-in-out;
+}
+@keyframes fade-down{
+    0% {
+        transform: translateY(-50%);opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);opacity: 1;
+    }
+}
+
+.main button:hover{
+    background-color: rgb(255, 255, 255,0.2);
+    cursor: pointer;
+}
+
+/* SERVICE SECTION */
+#Service h1{
+    text-align: center;
+    margin: 2.5% 0;
+    font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+:root {
+	--cards: 4;
+	--cardHeight: 50vh;
+	--cardTopPadding: 1.5em;
+	--cardMargin: 4vw;
+}
+
+#container{
+    font-family: "Montserrat";
+    color: white;
+	width: 90%;
+	margin: 0 auto;
+}
+#container img{
+    width: 130px;
+}
+#cards {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+	margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+	--index: 1;
+}
+#card2 {
+	--index: 2;
+}
+#card3 {
+	--index: 3;
+}
+#card4 {
+	--index: 4;
+}
+
+.card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+#card1 .card-body {
+	background-image: linear-gradient(to top left, #83e9e5c6,#131215);
+}
+#card2 .card-body {
+	background: linear-gradient(to top left, #967b41,#405c89,#44ac63);
+}
+#card3 .card-body {
+	background: linear-gradient(to top left, #d67ade,#90c6bb,#458074);
+}
+#card4 .card-body {
+	background: linear-gradient(to top left, #414645,#458074,#2c2828);
+}
+
+.card-body {
+	box-sizing: border-box;
+	padding: 30px;
+	border-radius: 50px;
+	box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+	height: var(--cardHeight);
+	display: flex;
+    justify-content:center;
+	align-items: center;
+	transition: all 0.5s;
+}
+
+h2 {
+	font-size: 2.5em;
+}
+
+/* JOURNEY SECTION*/
+#About{
+    text-align: center;
+    margin: 3% 0%;
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+.info img{
+    width: 500px;
+    margin-bottom: 20px;
+}
+.info{
+    background-image: url(/assets/images/About-me-bg-pic.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content:space-evenly ;
+    align-items: center;
+}
+#journey  p{
+    margin:0 10%;
+    
+    border:2px solid white ;
+    background-color: rgba(255, 255, 255, 0.6);
+}
