@@ -69,6 +69,7 @@ html{
     right: 0;
     bottom: 0;
     z-index: -1;
+    contain: content ;
 }
 /* @media(max-aspect-ratio: 16/9) {
     .background-video{
@@ -224,7 +225,7 @@ h2 {
     width: 500px;
     margin-bottom: 20px;
 }
-.info{
+/* .info{
     background-image: url(/assets/images/About-me-bg-pic.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -233,10 +234,9 @@ h2 {
     display: flex;
     justify-content:space-evenly ;
     align-items: center;
-}
+} */
 #journey  p{
     margin:0 10%;
-    
     border:2px solid white ;
     background-color: rgba(255, 255, 255, 0.6);
 }
